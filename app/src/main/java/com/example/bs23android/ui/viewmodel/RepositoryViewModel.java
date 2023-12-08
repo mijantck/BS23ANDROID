@@ -17,8 +17,8 @@ public class RepositoryViewModel extends ViewModel {
         this.repositoryRepository = repositoryRepository;
     }
 
-    public LiveData<List<RepositoryModel.Item>> searchRepositories(String query,String sort) {
-        return repositoryRepository.searchRepositories(query,sort);
+    public LiveData<List<RepositoryModel.Item>> searchRepositories(String packgeName,String query,String sort) {
+        return repositoryRepository.searchRepositories(packgeName,query,sort);
     }
 }
 

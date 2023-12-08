@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void fetchData() {
         // Call your repository method to get data and update the adapter
-        repository.searchRepositories("android","stars").observe(this, repositories -> {
+        String packageName = getApplicationContext().getPackageName();
+        repository.searchRepositories(packageName,"android","stars").observe(this, repositories -> {
             if (repositories != null) {
 
                 Log.d("djshfjk", "fetchData: "+repositories.size());

@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface RepositoryRepository {
 
-    LiveData<List<RepositoryModel.Item>> searchRepositories(String query,String sort);
+    LiveData<List<RepositoryModel.Item>> searchRepositories(String packgeName, String query,String sort);
 }

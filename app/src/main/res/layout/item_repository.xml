@@ -87,7 +87,7 @@
             <LinearLayout
                 android:layout_marginLeft="5dp"
                 android:gravity="center_vertical"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
                 <ImageView
                     android:layout_marginStart="5dp"
@@ -101,6 +101,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
             </LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/pushUpdateId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
     </RelativeLayout>

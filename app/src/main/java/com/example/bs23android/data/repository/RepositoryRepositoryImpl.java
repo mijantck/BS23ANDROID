@@ -1,5 +1,7 @@
 package com.example.bs23android.data.repository;
 
+import android.app.Application;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -20,10 +22,11 @@ public class RepositoryRepositoryImpl implements RepositoryRepository {
     }
 
     @Override
-    public LiveData<List<RepositoryModel.Item>> searchRepositories(String query,String sort) {
+    public LiveData<List<RepositoryModel.Item>> searchRepositories(String packgeName,String query,String sort) {
         MutableLiveData<List<RepositoryModel.Item>> data = new MutableLiveData<>();
 
-        apiService.searchRepositories(query,sort).enqueue(new Callback<RepositoryModel>() {
+
+        apiService.searchRepositories(packgeName,query,sort).enqueue(new Callback<RepositoryModel>() {
             @Override
             public void onResponse(Call<RepositoryModel> call, Response<RepositoryModel> response) {
                 if (response.isSuccessful()) {
